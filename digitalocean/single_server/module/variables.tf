@@ -3,6 +3,7 @@ variable "project_name" {
 }
 variable "digital_ocean_token" {
   description = "Authentication Token For Digital Ocean"
+  sensitive = true  
 }
 variable "digital_ocean_region" {
   description = "The Default Digital Ocean Region Slug: https://docs.digitalocean.com/products/platform/availability-matrix/"
@@ -23,10 +24,12 @@ variable "kasm_build_url" {
 variable "user_password" {
   default     = "changeme"
   description = "The default password to be used for the default user@kasm.local account. Only use alphanumeric characters"
+  sensitive = true
 }
 variable "admin_password" {
   default     = "changeme"
   description = "The default password to be used for the default admin@kasm.local account. Only use alphanumeric characters"
+  sensitive = true
 }
 variable "allow_ssh_cidrs" {
   description = "CIDR notation for hosts allowed to SSH"

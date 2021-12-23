@@ -8,14 +8,17 @@ variable "aws_domain_name" {
 
 variable "aws_key_pair" {
   description = "The name of an aws keypair to use."
+  sensitive = true
 }
 
 variable "aws_access_key" {
   description = "The AWS access key used for deployment"
+  sensitive = true
 }
 
 variable "aws_secret_key" {
   description = "The AWS secret key used for deployment"
+  sensitive = true
 }
 
 variable "num_agents" {
@@ -70,18 +73,23 @@ variable "master_subnet_id" {
 
 variable "database_password" {
   description = "The password for the database. No special characters"
+  sensitive = true
 }
 variable "redis_password" {
   description = "The password for the database. No special characters"
+  sensitive = true
 }
 variable "user_password" {
   description = "The password for the database. No special characters"
+  sensitive = true
 }
 variable "admin_password" {
   description = "The password for the database. No special characters"
+  sensitive = true
 }
 variable "manager_token" {
   description = "The password for the database. No special characters"
+  sensitive = true
 }
 variable "zone_name" {
   default = "default"
